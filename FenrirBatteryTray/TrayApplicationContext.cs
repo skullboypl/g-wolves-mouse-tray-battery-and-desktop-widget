@@ -36,7 +36,7 @@ internal sealed class TrayApplicationContext : ApplicationContext
         _trayIcon = new NotifyIcon
         {
             Visible = true,
-            Text = "Fenrir Battery — starting…",
+            Text = "Fenrir Battery - starting…",
             ContextMenuStrip = _menu,
         };
         _trayIcon.DoubleClick += (_, _) => _ = RefreshBatteryAsync();
@@ -66,6 +66,9 @@ internal sealed class TrayApplicationContext : ApplicationContext
 
     private void ApplySettings(AppSettings settings, bool initial = false)
     {
+        _widget.ApplyScale(settings.WidgetScalePercent);
+        _widget.ApplyBackgroundOpacity(settings.WidgetBackgroundOpacityPercent);
+        _widget.ApplyFontOpacity(settings.WidgetFontOpacityPercent);
         _widget.SetDraggable(settings.WidgetDraggable);
         _widget.ApplyPosition(settings.ResolveWidgetLocation(_widget.Size));
 
@@ -121,7 +124,9 @@ internal sealed class TrayApplicationContext : ApplicationContext
             _currentIcon = BatteryIconRenderer.Create(
                 reading.Value.Percent,
                 reading.Value.Status is BatteryStatus.Charging or BatteryStatus.Full,
-                _settings.TrayDisplay);
+                _settings.TrayDisplay,
+                _settings.TrayFontScalePercent,
+                _settings.TrayIconScalePercent);
             _trayIcon.Icon = _currentIcon;
 
             var status = reading.Value.Status switch
@@ -137,8 +142,8 @@ internal sealed class TrayApplicationContext : ApplicationContext
         {
             _trayIcon.Icon = SystemIcons.Application;
             _trayIcon.Text = error is null
-                ? "Fenrir Battery — no device"
-                : $"Fenrir Battery — {error}";
+                ? "Fenrir Battery - no device"
+                : $"Fenrir Battery - {error}";
         }
 
         if (_widget.Visible)

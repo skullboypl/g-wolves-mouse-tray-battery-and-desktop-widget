@@ -19,12 +19,17 @@ internal sealed class AppSettings
 
     private static readonly string SettingsPath = Path.Combine(SettingsDir, "settings.json");
 
-    public TrayDisplayMode TrayDisplay { get; set; } = TrayDisplayMode.BatteryWithPercent;
+    public TrayDisplayMode TrayDisplay { get; set; } = TrayDisplayMode.Percent;
     public bool WidgetVisible { get; set; }
     public bool WidgetDraggable { get; set; } = true;
     public int? WidgetX { get; set; }
     public int? WidgetY { get; set; }
-    public int PollIntervalSeconds { get; set; } = 45;
+    public int WidgetScalePercent { get; set; } = 100;
+    public int WidgetBackgroundOpacityPercent { get; set; } = 85;
+    public int WidgetFontOpacityPercent { get; set; } = 100;
+    public int TrayFontScalePercent { get; set; } = 230;
+    public int TrayIconScalePercent { get; set; } = 109;
+    public int PollIntervalSeconds { get; set; } = 120;
 
     public static AppSettings Load()
     {
