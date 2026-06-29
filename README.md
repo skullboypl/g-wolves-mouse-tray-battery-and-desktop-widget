@@ -4,6 +4,8 @@ A lightweight Windows system tray app (and optional desktop widget) that shows t
 
 ![Settings window and desktop widget](docs/settings-widget.png)
 
+![Tray context menu](docs/tray-menu.png)
+
 ## Features
 
 - **Tray icon** with live battery level and tooltip (charging / on battery / full)
