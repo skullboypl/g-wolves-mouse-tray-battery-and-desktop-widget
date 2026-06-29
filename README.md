@@ -6,12 +6,12 @@ A lightweight Windows system tray app (and optional desktop widget) that shows t
 
 - **Tray icon** with live battery level and tooltip (charging / on battery / full)
 - **Three tray display modes**: battery icon, percent only, or battery + percent (number overlaid on the battery with a drop shadow)
-- **Adjustable tray icon** — separate **font size** (60–400%) and **icon size** (60–400%) sliders
-- **Optional desktop widget** — layered, always-on-top, smooth native drag, position is remembered
-- **Independent widget opacity** — separate **background opacity** and **font opacity** sliders, blended against the desktop (per-pixel alpha)
+- **Adjustable tray icon** - separate **font size** (60–400%) and **icon size** (60–400%) sliders
+- **Optional desktop widget** - layered, always-on-top, smooth native drag, position is remembered
+- **Independent widget opacity** - separate **background opacity** and **font opacity** sliders, blended against the desktop (per-pixel alpha)
 - **Adjustable widget size** (50–250%)
 - **Settings window** (right-click the tray icon) with live preview
-- **Native HID** via [HidSharp](https://www.nuget.org/packages/HidSharp) — same protocol as the WebHID driver
+- **Native HID** via [HidSharp](https://www.nuget.org/packages/HidSharp) - same protocol as the WebHID driver
 - **Single-file `.exe`**, self-contained (no .NET install required on the target machine)
 
 ## Requirements
@@ -34,9 +34,9 @@ An icon appears next to the clock. Double-click = refresh. Right-click for the m
 
 Right-click the tray icon → **Settings…**
 
-- **Tray icon** — display mode (*Battery icon* / *Percent only* / *Battery + percent*), **Font size**, **Icon size**
-- **Desktop widget** — show/hide, allow/lock dragging, position (X, Y), **Reset position**, **Use current**, **Size**, **Background opacity**, **Font opacity**
-- **Refresh interval** — how often to poll the battery (15–300 seconds)
+- **Tray icon** - display mode (*Battery icon* / *Percent only* / *Battery + percent*), **Font size**, **Icon size**
+- **Desktop widget** - show/hide, allow/lock dragging, position (X, Y), **Reset position**, **Use current**, **Size**, **Background opacity**, **Font opacity**
+- **Refresh interval** - how often to poll the battery (15–300 seconds)
 
 Defaults: *Percent only*, font size 230%, icon size 109%, refresh 120 s.
 
