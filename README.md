@@ -2,6 +2,8 @@
 
 A lightweight Windows system tray app (and optional desktop widget) that shows the battery level of G-Wolves mice over native HID - no browser, no WebHID.
 
+![Settings window and desktop widget](docs/settings-widget.png)
+
 ## Features
 
 - **Tray icon** with live battery level and tooltip (charging / on battery / full)
