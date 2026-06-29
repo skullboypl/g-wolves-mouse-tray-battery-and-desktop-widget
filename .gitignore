@@ -1,0 +1,18 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+*.user
+
+# Rider / VS
+.vs/
+.idea/
+*.suo
+
+# Signed artifacts / certs
+*.pfx
+*.snk
+
+# OS
+Thumbs.db
+.DS_Store
